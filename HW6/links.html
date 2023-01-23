@@ -1,0 +1,344 @@
+<!Doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Links</title>
+	<link rel="icon" href="img/star1.png" type="image/png">
+<style>
+	body{
+		margin: 0;
+	}
+	a{
+		color: green;
+	}
+	a:hover{
+		color: red;
+	}
+
+
+	.div_1 li{
+		display: inline-block;
+		border-right: solid red 4px;
+		padding: 10px;
+	}
+	.div_1 li:last-child{
+		border-style: none;
+	}
+	.div_1 ul{
+		padding: 0;
+	}
+	.div_1{
+		margin-bottom: 20px;
+	}
+
+
+	.div_2{
+		margin-bottom: 20px;
+	}
+	.div_2 td:nth-child(even):not(td:last-child){
+		width: 4px;
+		background-color: red;
+		padding: 0;
+
+	}
+	.div_2 table{
+		border-spacing: 0;
+	}
+	.div_2 td:nth-child(odd){
+		padding: 10px;
+	}
+
+
+	.div_3{
+		margin-bottom: 20px;
+	}
+	.div_3 span{
+		padding: 7px;
+	}
+	.div_3 img{
+		vertical-align: -15px;
+	}
+
+
+	.div_4{
+		margin-bottom: 20px;
+		background-color: red;
+		display: inline-block;
+	}
+	.clearfix:after{
+		content: "";
+		visibility: hidden;
+		display: block;
+		height: 0;
+		clear: both;
+	}
+	.div_4 div{
+		float: left;
+		padding: 10px;
+		margin-right: 4px;
+		background-color: white;
+	}
+	.div_4 div:last-child{
+		margin-right: 0;
+	}
+
+
+	.div_5{
+		display: table;
+		margin-bottom: 8px;
+	}
+	.div_5 div{
+		display: table-cell;
+		padding: 5px;
+	}
+	.div_5 div:not(div:last-child)::after{
+		content: url('img/red.gif');
+		vertical-align: -15px;
+		margin-left: 5px;
+	}
+	.div_5 div:first-child{
+		padding-left: 10px;
+	}
+
+
+	.div_6{
+		margin-left: 10px;
+		margin-bottom: 10px;
+	}
+	.div_6 div{
+		display: inline;
+		paddin: 10px;
+	}
+	.div_6 span{
+		color:red;
+		font-size: 48px;
+		font-weight: 900;
+		vertical-align: -6px;
+	}
+
+
+	.div_7 ul{
+		display: table;
+		padding: 0;
+		margin-left: 10px;
+
+	}
+	.div_7 li{
+		display: table-cell;
+	}
+	.div_7 span{
+		font-size: 48px;
+		font-family: sans-serif;
+		color: red;
+		word-spacing: -10px;
+		font-weight: thick;
+		vertical-align: -11px;
+	}
+	.div_7 li:not(li:first-child){
+		padding-left: 5px;
+	}
+
+
+	.div_8{
+		margin-bottom: 10px;
+	}
+	.div_8 li{
+		float: left;
+		list-style-type: none;
+		padding: 10px;
+	}
+	.div_8 li:not(li:last-child){
+		border-image-source: url('img/red.gif');
+		border-image-slice: 1 4 2 0;
+		border-image-width: 4px;
+		border-image-repeat: stretch;
+		border-left: solid 1px transparent;
+	}
+	.div_8 ul{
+		padding: 0;
+	}
+
+
+	.div_9{
+		margin-left: 10px;
+	}
+	.div_9 table{
+		display: inline-table;
+		border-collapse: collapse;
+	}
+	.div_9 span{
+		font-size: 50px;
+		color: red;
+		word-spacing: -8px;
+		vertical-align: -10px;
+	}
+	.div_9 table:last-child tr td span{
+		visibility: hidden;
+	}
+</style>
+</head>
+<body>
+	<div class="div_1">
+		<ul>
+			<li><a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Первая ссылка</a></li>
+			<li><a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Вторая ссылка</a></li>
+			<li><a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Третья ссылка</a></li>
+			<li><a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Четвертая ссылка</a></li>
+			<li><a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Пятая ссылка</a></li>
+		</ul>
+	</div>
+<!-- В первом способе решил задать тегам li свойство display со значением inline-block, а разделитель сделал свойсством border.
+Хороший способ, проблем не вызвал.Получилось аккуратно. -->
+	<div class="div_2">
+		<table border="0">
+			<tr>
+			<td><a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Первая ссылка</a></td>
+			<td></td>
+			<td><a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Вторая ссылка</a></td>
+			<td></td>
+			<td><a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Третья ссылка</a></td>
+			<td></td>
+			<td><a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Четвертая ссылка</a></td>
+			<td></td>
+			<td><a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Пятая ссылка</a></td>
+			<td></td>
+			</tr>
+		</table>
+	</div>
+<!-- Во втором способе решил сделать все с помошью таблиц и разделители с помощью закрышивания красным фоном сооответствующих ячеек. Все получилось аккуратно красиво, без лишних отступов. Однако html код достаточно большой + кое где сложные селекторы, да и сам табличный метод уже неактуальный-->
+	<div class="div_3">
+		<span>
+			<a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Первая ссылка</a>
+		</span>
+		<img src="img/red.gif" alt="">
+		<span>
+			<a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Вторая ссылка</a>
+		</span>
+		<img src="img/red.gif" alt="">
+		<span>
+			<a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Третья ссылка</a>
+		</span>
+		<img src="img/red.gif" alt="">
+		<span>
+			<a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Четвертая ссылка</a>
+		</span>
+		<img src="img/red.gif" alt="">
+		<span>
+			<a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Пятая ссылка</a>
+		</span>
+	</div>
+<!-- В третьем способе решил сделать спанами, а разделитель вставить как картинку тегом имг. Спаны хрошая вещь в данном случае, CSS код очень маленький и понятный. Однако способ с картинкой мне не нравится, считаю он глупый (надо создавть картину, фон лучше и быстрее), но имеет место быть. -->
+	<div class="div_4 clearfix">
+		<div>
+			<a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Первая ссылка</a>
+		</div>
+		<div>
+			<a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Вторая ссылка</a>
+		</div>
+		<div>
+			<a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Третья ссылка</a>
+		</div>
+		<div>
+			<a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Четвертая ссылка</a>
+		</div>
+		<div>
+			<a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Пятая ссылка</a>
+		</div>
+	</div>
+<!-- В этом способе решил сделать ссылки блоками и кажому блоку задать float left, а разделитель сделал перекрытием белым фоном дочерних эл красного фона родительского контейнера. Способ самый сложный для понимания. Делал его дольше всех. Если разобраться всё просто. Но на мой взгляд есть и попроще)-->
+	<div class="div_5">
+		<div>
+			<a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Первая ссылка</a>
+		</div>
+		<div>
+			<a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Вторая ссылка</a>
+		</div>
+		<div>
+			<a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Третья ссылка</a>
+		</div>
+		<div>
+			<a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Четвертая ссылка</a>
+		</div>
+		<div>
+			<a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Пятая ссылка</a>
+		</div>
+	</div>
+<!-- В пятом способе решил сделать ссылки дивами которым задал свойства табличных ячеек и выстраил их в строку. Разделитель сделал псевдоэлементов after. Везде где нужно делать отдельно картинку, мне это не очень нравится. Плюс надо потом применять vertical-align, что мне лично не по душе. -->
+	<div class="div_6">
+		<div>
+			<a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Первая ссылка</a> <span>|</span>
+		</div>
+		<div>
+			<a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Вторая ссылка</a> <span>|</span>
+		</div>
+		<div>
+			<a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Третья ссылка</a> <span>|</span>
+		</div>
+		<div>
+			<a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Четвертая ссылка</a> <span>|</span>
+		</div>
+		<div>
+			<a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Пятая ссылка</a>
+		</div>
+	</div>
+<!-- В шестом способе я задал всем дивам в контейнере свойство display в значении inline. Разделитель сделал кнопкой "|" на клавиатуре и покрасил этот символ в красный цвет. Уже понял, что, не очень удобно использовать чисто стррчные элементы, у них есть свои отступы, которые нельзя убрать. Использовать символы для границ, тоже так себе вариант, потому что их надо корректировать относительно базовой линии свойством vertical-align, что кажется мне неудобным и и диковатым." -->
+	<div class="div_7">
+		<ul>
+			<li><a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Первая ссылка</a><span> I</span></li>
+			<li><a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Вторая ссылка</a><span> I</span></li>
+			<li><a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Третья ссылка</a><span> I</span></li>
+			<li><a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Четвертая ссылка</a><span> I</span></li>
+			<li><a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Пятая ссылка</a></li>
+		</ul>
+	</div>
+	<!-- В седьмом способе решил элементам ненумерованного списка задать display в значении table-cell. Разделитель делал большой буквой "I". Повторюсь знаки использовать вообщн неудобно. Удобнее всего border считаю (для этого это свойство и придумано, кстати))) Что касается свойсвто display table-cell - очень удобная вещь. думаю, буду применять в будущем. -->
+	<div class="div_8 clearfix">
+		<ul>
+			<li><a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Первая ссылка</a></li>
+			<li><a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Вторая ссылка</a></li>
+			<li><a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Третья ссылка</a></li>
+			<li><a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Четвертая ссылка</a></li>
+			<li><a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Пятая ссылка</a></li>
+		</ul>
+	</div>
+	<!-- В ввосьмом способе решил задать элементам списка float left. Границу сделал свойством border-image. Долго разбирался с ним, но оно того стоило. Не самый простой способ задания однотонной границы. -->
+	<div class="div_9">
+		<table>
+			<tr>
+				<td>
+					<a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Первая ссылка</a><span> &#10073;</span>
+				</td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td>
+					<a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Вторая ссылка</a><span> &#10073;</span>
+				</td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td>
+					<a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Третья ссылка</a><span> &#10073;</span>
+				</td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td>
+					<a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Четвертая ссылка</a><span> &#10073;</span>
+				</td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td>
+					<a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BB%D1%8C%D0%B4%D0%B0">Пятая ссылка</a><span> &#10073;</span>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<!-- В девятом способе решил сделать пять одноячеячных таблиц. Границу сделал мнемоником. Знаки повторюсь это неудобно для границ. Пришлось в послtдней таблице скрывать содержимое, чтобы таблицы были одинаковго размера. Это самый неудобный способ. Но он есть) Теперь пойду спать)))) -->
+</body>
+</html>
