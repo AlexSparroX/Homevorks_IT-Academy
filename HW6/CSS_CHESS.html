@@ -16,17 +16,22 @@
 			border-collapse: collapse;
 		}
 
-		/*Сделал зеленую рамку и покпасили ее. Для красоты убрал внутренние разделители */
+		/*Крашу ячейки в черный цвет */
 
-		tr>td:last-child, tr>td:first-child{
-			width: calc(65px /2.5);
-			background-color: greenyellow;
+		tr:nth-child(even)>td:nth-child(odd), tr:nth-child(odd)>td:nth-child(even){
+			background-color: black;
 		}
+
+		/*Сделал зеленую рамку и покрасил ее. Для красоты убрал внутренние разделители */
+
 		tr:first-child>td, tr:last-child>td{
-			height: calc(65px / 2.5);
-			background-color: greenyellow;
+			height: calc(65px /2.5);
+			background-color: greenyellow !important;
 		}
-
+		tr>td:first-child, tr>td:last-child{
+			width: calc(65px /2.5);
+			background-color: greenyellow !important;
+		}
 	/*Убираю внутренние разделители */
 
 		tr>td:last-child, tr>td:first-child{
@@ -55,15 +60,6 @@
 		tr:last-child>td:first-child{
 			border-left: 3px solid black;
 			border-bottom: 3px solid black;
-		}
-
-		/*Крашу ячейки в черный цвет */
-
-		tr:nth-child(even):not(tr:last-child)>td:nth-child(odd):not(td:first-child){
-			background-color: black;
-		}
-		tr:nth-child(odd):not(tr:first-child)>td:nth-child(even):not(td:last-child){
-			background-color: black;
 		}
 	</style>
 </head>
